@@ -3,7 +3,7 @@ import { ClassNameValue, twMerge } from 'tailwind-merge'
 import IconGoogle from '../assets/icon.png'
 
 const base =
-  'flex w-full items-center justify-center px-6 py-12' as ClassNameValue
+  'flex min-h-screen w-full items-center justify-center p-6 md:p-8 2xl:p-0' as ClassNameValue
 
 export type LoginProps = ComponentProps<'section'>
 
@@ -12,9 +12,13 @@ export function Login({ className, ...props }: LoginProps) {
     <section className={twMerge(base, className)} {...props}>
       <div className="flex w-full max-w-md flex-col items-center justify-center gap-16">
         <div className="flex w-full flex-col items-start justify-center gap-10">
-          <div className="flex w-full flex-col justify-start gap-2">
-            <span className="text-base font-medium">Bem-vindo de volta</span>
-            <h1 className="text-2xl font-semibold">Faça login na sua conta</h1>
+          <div className="flex w-full flex-col justify-start gap-2 md:gap-3">
+            <span className="text-base font-medium md:text-xl">
+              Bem-vindo de volta
+            </span>
+            <h1 className="text-2xl font-semibold md:text-3xl">
+              Faça login na sua conta
+            </h1>
           </div>
 
           <form
@@ -24,7 +28,10 @@ export function Login({ className, ...props }: LoginProps) {
             <fieldset className="flex w-full flex-col gap-6">
               <div className="flex w-full flex-col gap-8">
                 <div className="flex w-full flex-col gap-3">
-                  <label className="text-sm font-normal" htmlFor="email">
+                  <label
+                    className="text-sm font-normal md:text-lg"
+                    htmlFor="email"
+                  >
                     E-mail
                   </label>
                   <input
@@ -37,7 +44,10 @@ export function Login({ className, ...props }: LoginProps) {
                 </div>
 
                 <div className="flex w-full flex-col gap-3">
-                  <label className="text-sm font-normal" htmlFor="password">
+                  <label
+                    className="text-sm font-normal md:text-lg"
+                    htmlFor="password"
+                  >
                     Senha
                   </label>
                   <input
@@ -59,13 +69,16 @@ export function Login({ className, ...props }: LoginProps) {
                     id="lembre-de-mim"
                   />
                   <label
-                    className="text-sm font-medium"
+                    className="text-sm font-medium md:text-base"
                     htmlFor="lembre-de-mim"
                   >
                     Lembre de mim
                   </label>
                 </div>
-                <a className="text-sm font-medium text-emerald-600" href="#">
+                <a
+                  className="text-sm font-medium text-emerald-600 md:text-base"
+                  href="#"
+                >
                   Esqueceu a senha?
                 </a>
               </div>
@@ -74,15 +87,19 @@ export function Login({ className, ...props }: LoginProps) {
             <div className="flex w-full flex-col items-center justify-center gap-6">
               <button
                 type="submit"
-                className="flex h-11 w-full items-center justify-center gap-3 rounded bg-emerald-600 px-3.5 py-3.5 text-base font-semibold text-white"
+                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-emerald-600 p-3.5 text-base font-semibold text-white md:h-12 md:text-lg"
               >
                 Entrar na conta
               </button>
               <button
                 type="button"
-                className="flex h-11 w-full items-center justify-center gap-3 rounded bg-gray-900 px-3.5 py-3.5 text-base font-semibold text-white"
+                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-gray-900 p-3.5 text-base font-semibold text-white md:h-12 md:text-lg"
               >
-                <img className="h-4 w-4" src={IconGoogle} alt="Google" />
+                <img
+                  className="h-4 w-4 md:h-6 md:w-6"
+                  src={IconGoogle}
+                  alt="Google"
+                />
                 {''}
                 Ou faça login com o Google
               </button>
@@ -90,7 +107,7 @@ export function Login({ className, ...props }: LoginProps) {
           </form>
         </div>
 
-        <span className="text-center text-base font-medium">
+        <span className="text-center text-base font-medium md:text-xl">
           Não tem uma conta?{' '}
           <a className="text-emerald-600" href="#">
             Cadastre-se

@@ -10,8 +10,8 @@ export type DefaultProps = ComponentProps<'div'>
 export function Default({ className, ...props }: DefaultProps) {
   return (
     <div className={twMerge(base, className)} {...props}>
-      <section className="hidden bg-green-50 lg:flex lg:min-h-screen lg:w-full lg:items-center lg:justify-center">
-        <img src={Imagem} alt="imagem" />
+      <section className="hidden bg-green-50 lg:flex lg:min-h-screen lg:w-full lg:items-center lg:justify-center lg:p-8 xl:p-0">
+        <img className="flex-shrink object-cover" src={Imagem} alt="imagem" />
       </section>
       <main className="flex w-full justify-center">{props.children}</main>
     </div>
