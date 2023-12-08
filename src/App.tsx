@@ -1,3 +1,10 @@
+import { Layouts } from './layouts'
+import { Login } from './pages'
+
 export function App() {
-  return <div>Login</div>
+  return (
+    <Layouts.Default>
+      <Login />
+    </Layouts.Default>
+  )
 }
