@@ -1,6 +1,7 @@
 import { ComponentProps } from 'react'
 import { ClassNameValue, twMerge } from 'tailwind-merge'
 import IconGoogle from '../assets/icon.png'
+import { Button, Form } from '../components'
 
 const base =
   'flex min-h-screen w-full items-center justify-center p-6 md:p-8 2xl:p-0' as ClassNameValue
@@ -27,37 +28,25 @@ export function Login({ className, ...props }: LoginProps) {
           >
             <fieldset className="flex w-full flex-col gap-6">
               <div className="flex w-full flex-col gap-8">
-                <div className="flex w-full flex-col gap-3">
-                  <label
-                    className="text-sm font-normal md:text-lg"
-                    htmlFor="email"
-                  >
-                    E-mail
-                  </label>
-                  <input
-                    className="flex w-full items-center gap-2 truncate rounded border border-gray-200 bg-slate-50 p-4 text-base font-normal outline-none placeholder:text-neutral-500 focus-within:border-emerald-600 focus-within:ring-4 focus-within:ring-emerald-600/20 dark:border-zinc-600 dark:bg-zinc-800"
+                <Form.Group>
+                  <Form.Label htmlFor="email">E-mail</Form.Label>
+                  <Form.Input
                     placeholder="exemplo@gmail.com"
                     type="email"
                     name="email"
                     id="email"
                   />
-                </div>
+                </Form.Group>
 
-                <div className="flex w-full flex-col gap-3">
-                  <label
-                    className="text-sm font-normal md:text-lg"
-                    htmlFor="password"
-                  >
-                    Senha
-                  </label>
-                  <input
-                    className="flex w-full items-center gap-2 truncate rounded border border-gray-200 bg-slate-50 p-4 text-base font-normal outline-none placeholder:text-neutral-500 focus-within:border-emerald-600 focus-within:ring-4 focus-within:ring-emerald-600/20 dark:border-zinc-600 dark:bg-zinc-800"
+                <Form.Group>
+                  <Form.Label htmlFor="password">Senha</Form.Label>
+                  <Form.Input
                     placeholder="0123456789"
                     type="password"
                     name="password"
                     id="password"
                   />
-                </div>
+                </Form.Group>
               </div>
 
               <div className="flex w-full items-center justify-between">
@@ -85,15 +74,10 @@ export function Login({ className, ...props }: LoginProps) {
             </fieldset>
 
             <div className="flex w-full flex-col items-center justify-center gap-6">
-              <button
-                type="submit"
-                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-emerald-600 p-3.5 text-base font-semibold text-white outline-none focus-within:ring-4 focus-within:ring-emerald-600 hover:bg-emerald-600/80 dark:text-gray-200 md:h-12 md:text-lg"
-              >
-                Entrar na conta
-              </button>
-              <button
+              <Button type="submit">Entrar na conta</Button>
+              <Button
                 type="button"
-                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-gray-900 p-3.5 text-base font-semibold text-white outline-none focus-within:ring-4 focus-within:ring-emerald-600 hover:bg-gray-900/80 dark:bg-gray-900 dark:text-gray-200 md:h-12 md:text-lg"
+                className="bg-gray-900 hover:bg-gray-900/80 dark:bg-gray-900    "
               >
                 <img
                   className="h-4 w-4 md:h-6 md:w-6"
@@ -102,7 +86,7 @@ export function Login({ className, ...props }: LoginProps) {
                 />
                 {''}
                 Ou faça login com o Google
-              </button>
+              </Button>
             </div>
           </form>
         </div>
