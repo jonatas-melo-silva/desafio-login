@@ -13,7 +13,7 @@ export function Default({ className, ...props }: DefaultProps) {
       className={twMerge(base, 'text-slate-200 dark:bg-zinc-950', className)}
       {...props}
     >
-      <section className="hidden bg-green-50 dark:bg-green-950 lg:flex lg:min-h-screen lg:w-full lg:items-center lg:justify-center lg:p-8 xl:p-0">
+      <section className="hidden bg-green-50 dark:bg-green-950 xl:flex xl:min-h-screen xl:w-full xl:items-center xl:justify-center">
         <img className="flex-shrink object-cover" src={Imagem} alt="imagem" />
       </section>
       <main className="flex w-full justify-center">{props.children}</main>
