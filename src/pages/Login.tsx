@@ -35,7 +35,7 @@ export function Login({ className, ...props }: LoginProps) {
                     E-mail
                   </label>
                   <input
-                    className="flex w-full items-center gap-2 truncate rounded border border-gray-200 bg-slate-50 p-4 text-base font-normal outline-none placeholder:text-neutral-500"
+                    className="flex w-full items-center gap-2 truncate rounded border border-gray-200 bg-slate-50 p-4 text-base font-normal outline-none placeholder:text-neutral-500 focus-within:border-emerald-600 focus-within:ring-4 focus-within:ring-emerald-600/20 dark:border-zinc-600 dark:bg-zinc-800"
                     placeholder="exemplo@gmail.com"
                     type="email"
                     name="email"
@@ -51,7 +51,7 @@ export function Login({ className, ...props }: LoginProps) {
                     Senha
                   </label>
                   <input
-                    className="flex w-full items-center gap-2 truncate rounded border border-gray-200 bg-slate-50 p-4 text-base font-normal outline-none placeholder:text-neutral-500"
+                    className="flex w-full items-center gap-2 truncate rounded border border-gray-200 bg-slate-50 p-4 text-base font-normal outline-none placeholder:text-neutral-500 focus-within:border-emerald-600 focus-within:ring-4 focus-within:ring-emerald-600/20 dark:border-zinc-600 dark:bg-zinc-800"
                     placeholder="0123456789"
                     type="password"
                     name="password"
@@ -63,7 +63,7 @@ export function Login({ className, ...props }: LoginProps) {
               <div className="flex w-full items-center justify-between">
                 <div className="flex items-center justify-start gap-2">
                   <input
-                    className="bg-slate-50"
+                    className="rounded bg-slate-50 outline-none focus-within:ring-4 focus-within:ring-emerald-600 dark:active:bg-emerald-400"
                     type="radio"
                     name="lembre-de-mim"
                     id="lembre-de-mim"
@@ -76,7 +76,7 @@ export function Login({ className, ...props }: LoginProps) {
                   </label>
                 </div>
                 <a
-                  className="text-sm font-medium text-emerald-600 md:text-base"
+                  className="rounded text-sm font-medium text-emerald-600 outline-none focus-within:ring-4 focus-within:ring-emerald-600 dark:text-emerald-400 md:text-base"
                   href="#"
                 >
                   Esqueceu a senha?
@@ -87,13 +87,13 @@ export function Login({ className, ...props }: LoginProps) {
             <div className="flex w-full flex-col items-center justify-center gap-6">
               <button
                 type="submit"
-                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-emerald-600 p-3.5 text-base font-semibold text-white md:h-12 md:text-lg"
+                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-emerald-600 p-3.5 text-base font-semibold text-white outline-none focus-within:ring-4 focus-within:ring-emerald-600 hover:bg-emerald-600/80 dark:text-gray-200 md:h-12 md:text-lg"
               >
                 Entrar na conta
               </button>
               <button
                 type="button"
-                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-gray-900 p-3.5 text-base font-semibold text-white md:h-12 md:text-lg"
+                className="flex h-11 w-full items-center justify-center gap-3 truncate rounded bg-gray-900 p-3.5 text-base font-semibold text-white outline-none focus-within:ring-4 focus-within:ring-emerald-600 hover:bg-gray-900/80 dark:bg-gray-900 dark:text-gray-200 md:h-12 md:text-lg"
               >
                 <img
                   className="h-4 w-4 md:h-6 md:w-6"
@@ -109,7 +109,10 @@ export function Login({ className, ...props }: LoginProps) {
 
         <span className="text-center text-base font-medium md:text-xl">
           Não tem uma conta?{' '}
-          <a className="text-emerald-600" href="#">
+          <a
+            className="rounded text-emerald-600 outline-none focus-within:ring-4 focus-within:ring-emerald-600 dark:text-emerald-400"
+            href="#"
+          >
             Cadastre-se
           </a>
         </span>
