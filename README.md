@@ -16,7 +16,7 @@ O desafio consiste em criar uma aplicação de login usando ReactJS. A aplicaç�
 
 ```bash
 # Clone este repositório
-$ git clone
+$ git clone https://github.com/jonatas-melo-silva/desafio-login.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd desafio-login
