@@ -1,3 +1,5 @@
+![desafio-login](https://github.com/jonatas-melo-silva/desafio-login/assets/28713622/3eef0b38-8720-41fe-929e-1643e470f50d)
+
 # Desafio login
 
 Uma aplicação de login usando ReactJS.
